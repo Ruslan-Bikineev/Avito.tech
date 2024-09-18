@@ -3,7 +3,7 @@
 <suite name="All API Test Suite">
     <test name="Declaration API Tests">
         <packages>
-            <package name="tests/*"></package>
+            <package name="tests"></package>
         </packages>
     </test>
 </suite>
