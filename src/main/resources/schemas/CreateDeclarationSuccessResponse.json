@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "https://qa-internship.avito.com/api/1/item",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    }
+  }
+}

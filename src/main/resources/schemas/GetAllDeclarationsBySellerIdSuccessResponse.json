@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "https://qa-internship.avito.com/api/1/:sellerID/item",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "price": {
+          "type": "integer"
+        },
+        "sellerId": {
+          "type": "integer"
+        },
+        "statistics": {
+          "type": "object",
+          "properties": {
+            "contacts": {
+              "type": "integer"
+            },
+            "likes": {
+              "type": "integer"
+            },
+            "viewCount": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "contacts",
+            "likes",
+            "viewCount"
+          ]
+        }
+      },
+      "required": [
+        "createdAt",
+        "id",
+        "name",
+        "price",
+        "sellerId",
+        "statistics"
+      ]
+    }
+  ]
+}

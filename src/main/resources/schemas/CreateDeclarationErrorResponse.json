@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "https://qa-internship.avito.com/api/1/item",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "enum": [
+        "invalid content type"
+      ]
+    },
+    "code": {
+      "type": "string",
+      "enum": [
+        "400"
+      ]
+    }
+  }
+}
