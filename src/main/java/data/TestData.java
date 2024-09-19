@@ -8,5 +8,5 @@ public class TestData {
     public static final String CURRENT_TIMEZONE = "Asia/Yekaterinburg";
     public static final Integer NON_EXISTING_SELLER_ID = 121;
     public static final Integer AMOUNT_CREATE_DECLARATIONS = 5;
-    public static final Integer SELLER_ID_TO_CREATE_DECLARATIONS = 1119883;
+    public static final Integer SELLER_ID_TO_CREATE_DECLARATIONS = 1119885;
 }
