@@ -1,6 +1,7 @@
 package tests;
 
 import data.TestData;
+import helper.ConditionPreparation;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -35,15 +36,7 @@ public class GetMethodForDeclarationTests extends BaseTest {
     @Owner(value = "Ruslan Bikineev")
     @Severity(CRITICAL)
     public void testGetSpecificDeclaration() {
-        //PreConditions
-        String identifier = RestAssured.given()
-                .body(Declaration.getDefaultJsonBodyDeclaration())
-                .when()
-                .post(TestData.POST_DECLARATION)
-                .then()
-                .assertThat().statusCode(200)
-                .body(matchesJsonSchemaInClasspath("schemas/CreateDeclarationSuccessResponse.json"))
-                .extract().jsonPath().getString("status").split(" ")[3];
+        String identifier = ConditionPreparation.preConditionCreateDefaultDeclaration();
 
         Declaration declaration = RestAssured.given()
                 .when()

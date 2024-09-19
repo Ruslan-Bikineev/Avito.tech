@@ -38,7 +38,7 @@ public class PostMethodForDeclarationTests extends BaseTest {
                 .body(Declaration.getDefaultJsonBodyDeclaration())
                 .when()
                 .post(TestData.POST_DECLARATION)
-                .then().log().all()
+                .then()
                 .assertThat().statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemas/CreateDeclarationSuccessResponse.json"));
     }

@@ -1,6 +1,7 @@
 package models.submodels;
 
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,6 +13,7 @@ import java.util.Map;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 public class Statistics {
     private Integer contacts;
     private Integer likes;
@@ -33,5 +35,13 @@ public class Statistics {
             result = true;
         }
         return result;
+    }
+
+    public HashMap<String, Object> getJsonBodyStatistics() {
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("contacts", this.contacts);
+        hashMap.put("likes", this.likes);
+        hashMap.put("viewCount", this.viewCount);
+        return hashMap;
     }
 }
